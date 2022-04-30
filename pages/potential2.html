@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Why do you have 2nd thoughts on your potential</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+        <strong><h1> I find it difficult to figure out a career path for myself.</h1></strong>
+        <br>
+        <strong>----Mini Therapy----</strong>
+        <br><br>
+        </form>
+        <form>
+        <!-- Hello dear!<br>
+        Welcome to your safe space. 🌻 
+        <br> -->
+        <br>
+        <p id="text">
+        Another important reminder is that we always have the choice of changing our career path, whenever the need arises. When we remind ourselves of this, it can help take some pressure off of our mind.
+        <br>
+        The first step in working on any discomfort is to first acknowledge it. So when you think about choosing a career, what exactly about it makes you feel uncertain or anxious and why? Let’s laying these out in front of us one by one.</p>
+
+        <br><br><br><br>
+        <input type="button" onclick="textspeak()" value="Listen">
+        <a href="Feeling.html">How are you feeling now dear?</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

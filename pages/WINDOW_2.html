@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINDOW 2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Saira+Condensed:wght@100&family=Syne+Tactile&display=swap');
+
+        body {
+            height: 100vh;
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.6));
+            background-image: url(../component/david-marcu-78A265wPiO4-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            backdrop-filter: blur(5px);
+
+
+        }
+         
+
+        form {
+            position: absolute;
+            padding: 40px;
+            width: 500px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: #1919197e;
+            border: 0px solid;
+            border-radius: 10px;
+        }
+
+        form h1 {
+            text-transform: uppercase;
+            font-weight: 400;
+            color: white;
+        }
+
+        form input[type="email"],
+        input[type="password"] {
+            border: 0px;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            padding: 14px 10px;
+            border: 2px solid #3498db;
+            color: white;
+            outline: none;
+            border-radius: 24px;
+            transition: 0.25s;
+            width: 200px;
+        }
+
+        form input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #2ecc11;
+            width: 280px;
+        }
+
+        form input[type="submit"] {
+            border: 0px;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            padding: 14px 40px;
+            border: 2px solid #2ecc11;
+            color: white;
+            outline: none;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover,
+        #pay:hover {
+            background-color: #2ecc11;
+            border-color: none;
+        }
+
+        form #pay {
+            text-decoration: none;
+            color: white;
+            border: 0px;
+            background: none;
+            display: inline-block;
+            text-align: center;
+            padding: 14px 40px;
+            border: 2px solid #2ecc11;
+            outline: none;
+            border-radius: 34px;
+            transition: 0.25s;
+            font-size: 15px;
+        }
+
+        form .for {
+            padding: 14px 40px;
+            color: white;
+            text-decoration: none;
+        }
+
+        form a:hover {
+            color: #2ecc11;
+        }
+
+        form a:active {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://rishav045-github-io.vercel.app/login" class="box" target="_blank">
+        <h1>MEMBERSHIP</h1>
+        <input type="submit" value="LOGIN">
+        <a href="https://rishav045-github-io.vercel.app/register" target="_blank" id="pay">PAY NOW (20$)</a>
+        <!-- <a href="https://rishav045-github-io.vercel.app/register" id="pay">PAY NOW (20$)</a> -->
+            <br><br>
+
+    </form>
+
+</body>
+
+</html>

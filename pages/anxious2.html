@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Are you anxious?</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+    <strong><h1> I feel anxious when things don't go the way I plan them to be.</h1></strong>
+    <br>
+    <strong>----Mini Therapy----</strong>
+    <br><br>
+    </form>
+    <form><p id="text">
+        Dear, There’s comfort in having a plan and sticking to it. Well, that probably explains why we make plans in the first place. 🤷🏻‍♀️<br>
+        But unfortunately, life does not always go according to our plans. And sometimes, even when a single thing goes off-track, we feel like our plans are completely ruined. 😓 <br>
+
+        The moment we are not able to tick off one item on our list, the entire plan feels inconsistent. Our feelings are chaotic, and nothing seems to be going well. ☹️ <br>
+
+        Before moving any further ahead, shall we discuss the feeling that is bothering you at the moment?</p>
+        <br><br><br><br>
+        <input type="button" onclick="textspeak()" value="Listen">
+        <a href="Feeling.html">How are you feeling now dear?</a>
+    </p>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

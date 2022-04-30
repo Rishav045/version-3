@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Why</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+    <strong><h1> I can't stop crying when I am upset</h1></strong>
+    <br>
+    <strong>----Mini Therapy----</strong>
+    <br><br>
+    </form>
+    <form>
+    Hello dear!<br>
+    Welcome to your safe space. 🌻 
+    <br>
+    <p id="text">
+    Our feelings- especially sadness-can be very tricky to understand, and even more difficult to control. When something upsets us, the feeling of sadness often manifests both emotionally and physically.
+
+    <br>
+    Sadness can often seem to be engulging us, and it feels like there are no ways to let our emotions out expect by crying.
+    However, tearing up in a moment of sadness often ends up bringing feelings of guilt and shame, instead of providing us a sense of relief. This happens because many of us are taught that crying is a sign of weakness.</p>
+<br><br><br><br>
+<input type="button" onclick="textspeak()" value="Listen">
+<a href="upset2.html">Next step</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

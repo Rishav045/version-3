@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Are you anxious?</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script> 
+    <form>
+    <strong><h1> I feel anxious when things don't go the way I plan.</h1></strong>
+    <br>
+    <strong>----Mini Therapy----</strong>
+    <br><br>
+    </form>
+    <form>
+    Hello dear!<br>
+    Welcome to your safe space. 🌻 
+    <br>
+    <p id="text">
+    Many of us like our days to be clearly planned and laid out. We wake up either looking forward to the things planned out for the day, or dreading the list of tasks we have to complete. 📝<br>
+    It doesn’t matter what our plans look like - they can be rough, short, or more detailed and elaborate. Either ways, having even a rough idea of what we are doing in a day somehow has a calming effect, doesn’t it?</p>
+<br><br><br><br>
+<input type="button" onclick="textspeak()" value="Listen">
+<a href="anxious2.html">Next step</a>
+    </p>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

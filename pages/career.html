@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Unable to find career path for myself</title>
+</head>
+<body>
+    <form>
+        <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+        <strong><h1> I find it difficult to figure out a career path for myself.</h1></strong>
+        <br>
+        <strong>----Mini Therapy----</strong>
+        <br><br>
+        </form>
+        <form>
+        Hello dear!<br>
+        Welcome to your safe space. 🌻 
+        <br>
+        <p id="text">
+        Academic success and a gratifying career in terms of job satisfaction and financial stability is what we are all taught to aspire for and work towards in life, perhaps from the very first day of school. While that is the norm, being uncertain about your career options and struggling to find a career path can be quite stressful.<br>
+        I understand how you are feeling, dear. Choosing a career path is neither easy nor simple. Society makes us believe that our entire life depends on this one decision we make. But, in fact, there is so much more than just our careers which defines who we are. Remember that our career path is a definable aspect of our lives, but it’s not all of it.</p>
+
+        <br><br><br><br>
+        <input type="button" onclick="textspeak()" value="Listen">
+<a href="career2.html">Next step</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

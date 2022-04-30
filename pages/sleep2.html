@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Not able to sleep?</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+    <strong><h1> Lost sleep worrying about how people perceive me.</h1></strong>
+    <br>
+    <strong>----Mini Therapy----</strong>
+    <br><br>
+    </form>
+    <form>
+    
+    <p id="text">
+        Dear, many a time, worrying about what others think of us stems from a need to be admired or validated by others. Wanting to be liked by others is a perfectly human desire. It only becomes a stressor if there is an imbalance between our need for validation from others and from ourselves.
+        <br>
+        If we feel too dependent on other people’s perceptions of us, it could be a sign that we’re having trouble trusting our own perception of ourselves. Perhaps there are some insecurities that we’re struggling with, which causes us to worry more about what others think of us. 🤔 <br>
+        Let’s try to understand what is making us worry about how others perceive us without judging ourselves for it. Remember, it is a very human need to want validation. It does not define us, and we should definitely judge ourselves for it. 🤗</p>
+        <br><br><br><br>
+        <input type="button" onclick="textspeak()" value="Listen">
+        <a href="Feeling.html">How are you feeling now dear?</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

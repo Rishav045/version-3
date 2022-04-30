@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Not time for your hobbies?</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+        <strong><h1>I have no time for my hobbies.</h1></strong>
+        <br>
+        <strong>----Mini Therapy----</strong>
+        <br><br>
+        </form>
+        <form>
+        
+    <p id="text">
+        Dear, Now, let’s try to understand why we are unable to make time to invest in our hobbies even when we know it’ll be good for us. Is it that we have too much work or other things to take care of, or is our free time going into scrolling through social media and just lying in bed? Let’s find out!</p>
+        <br><br><br><br>
+        <input type="button" onclick="textspeak()" value="Listen">
+        <a href="Feeling.html">How are you feeling now dear?</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

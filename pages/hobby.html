@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Not time for your hobbies?</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+        <strong><h1>I have no time for my hobbies.</h1></strong>
+        <br>
+        <strong>----Mini Therapy----</strong>
+        <br><br>
+        </form>
+        <form>
+        Hello dear!<br>
+        Welcome to your safe space. 🌻 
+        <br>
+        <p id="text">
+    
+        Given today’s work culture, a lot of us find it difficult to take time out for our hobbies. Any free time we have goes into resting, running errands, or taking care of others. The worst thing is that we are encouraged to work until the verge of burnout, and this kind of a life is even glorified.<br>
+        Being productive is necessary, but if it comes at the cost of our personal care and wellbeing, something’s got to change, right?
+        <br>
+        As important as our work may be, we need to rejuvenate ourselves to balance it out. In fact, doing so helps us become even more productive. But when it’s all work and no play, we become like a machine running on auto-pilot.</p>
+    <br><br><br><br>
+    <input type="button" onclick="textspeak()" value="Listen">
+    <a href="hobby2.html">Next step</a>
+        </p>
+    </form>
+    <script>
+    
+        function textspeak(){
+            // var text = document.getElementById("text").value;
+            var text =document.getElementById("text"). innerText;
+            // alert(text);
+            responsiveVoice.speak(text);
+        }
+    </script>
+</body>
+</html>

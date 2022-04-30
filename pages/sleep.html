@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Not able to sleep?</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+    <strong><h1> Lost sleep worrying about how people perceive me.</h1></strong>
+    <br>
+    <strong>----Mini Therapy----</strong>
+    <br><br>
+    </form>
+    <form>
+    Hello dear!<br>
+    Welcome to your safe space. 🌻 
+    <br>
+    <p id="text">
+
+Worrying about being judged and what others think of us can get very stressful sometimes, don’t you think?
+<br>
+It takes up most of our waking hours, and sometimes, even the hours that are meant for some much-needed sleep. 💤
+<br><br>    
+Tossing and turning in bed because we can’t stop thinking about everything we said or did during the day, wondering how others must’ve perceived them, and then waking up feeling fatigued and anxious, just to go through the same cycle again at night - all of this can get really exhausting. 😪 
+<br>
+But don’t worry, there is a way out! Let us do our best to break this pattern, together. 💜</p>
+<br><br><br><br>
+<input type="button" onclick="textspeak()" value="Listen">
+<a href="sleep2.html">Next step</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>

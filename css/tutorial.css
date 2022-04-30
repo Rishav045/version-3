@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Saira+Condensed:wght@100&family=Syne+Tactile&display=swap');
+
+/*  Base styling */
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+font-family: "Poppins",sans-serif;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+h1,h2,p{
+    margin: 16px 0px;
+}
+h1{
+    font-weight: 800;
+    font-size: 36px;
+}
+h2{
+    font-weight: 800;
+    font-size: 24px;   
+}
+p{
+    font-weight: 400;
+    font-size: 18px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+section{
+    padding: 100px 0;
+}
+
+/*  Main css */
+
+header{
+    height: 100vh;
+    background: linear-gradient(rgb(0,0,0,0.9),rgb(0,0,0,0.6));
+    background-image: url(../component/david-marcu-78A265wPiO4-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo h1 a{
+    font-size: 32px;
+    color: #4CAF50;
+    margin: 0px;
+}
+nav{
+    padding: 2% 8%;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+    list-style-type: none;
+}
+
+nav box-icon{
+    display: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-left: 25px;
+}
+nav ul li a:hover{
+    color: black;
+    transition: 0.6s linear;
+    margin-left: 15px;
+}
+.header-content{
+    width: 50%;
+    top: 16%;
+    left: 8%;
+    position: relative;
+}
+form{
+    margin: 24px 0;
+}
+input{
+    font-size: 18px;
+}
+form a{
+    width:50%;
+    padding:12px 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    margin: 10px 0px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+}
+input[type="text"],
+input[type="email"]{
+    width: 50%;
+    display: block;
+    padding: 12px 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+}
+input[type="submit"]{
+    width:50%;
+    padding:12px 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+input::placeholder{
+    font-size: 13px;
+    color: rgb(172, 167, 167);
+}
+
+/* About */
+.about-left,.about-right,.about-middle{
+    flex-basis: 30%;
+    padding:16px
+}
+
+.btn{
+    padding:8px 12px;
+    background-color: #4CAF50;
+    color: #fff;
+    display: inline-block;
+    margin: 2px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.about2{
+    color: whitesmoke;
+    background: #222
+}
+.about2-left{
+    flex-basis: 50%;
+}
+.about2-right{
+    flex-basis: 30%;
+}
+.about2-right .card {
+    padding: 30px 50px;
+    color: #222;
+    background-color: #dcdcdc;
+    margin: 20px;
+    text-align: center;
+    min-width: 50%;
+    min-height: 50%;
+}
+.about2-right .row{
+    min-height: 50%;
+}
+.about2 a{
+    color: #222;
+}
+
+/* Process section */
+
+.process .row{
+    justify-content: center;
+}
+.process-content{
+    margin-top: 100px;
+}
+.process-bar{
+    margin: auto;
+    width: 80%;
+    height: 2px;
+    background-color: #222;
+    position: relative;
+}
+.process-bar .c1,
+.process-bar .c2,
+.process-bar .c3{
+    height:20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #222;
+    position: absolute;
+}
+.process-bar .c1{
+    top: -8px;
+    left: 50px;
+}.process-bar .c2{
+    top: -8px;
+    left: 50%;
+}.process-bar .c3{
+    top: -8px;
+    right: 50px;
+}
+.box1,
+.box2,
+.box3{
+    padding: 18px;
+}
+
+.process .box2{
+    text-align: center;
+}
+.process .box3{
+    text-align: right;
+}
+.process-content h2{
+    color: #4CAF50;
+}
+
+/* Testimony */
+
+.testimony{
+    background-color: #222;
+    color: whitesmoke;
+}
+.testimony .test{
+    background-color: #505050;
+    padding: 40px 80px;
+    margin: 0 10px;
+}
+.testimony .image{
+    height: 80px;
+    width: 80px;
+}
+.testimony img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Contact form */
+.contact .row {
+    justify-content:center;
+}
+
+.contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+}
+
+.contact form input {
+    width: 100%;
+}
+.contact form input[type="submit"]{
+    width: 30%;
+    text-align: center;
+}
+
+.contact textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    font-size: 1.3rem;
+    resize: none;
+    color: rgb(0, 0, 0);
+    margin: 1.2rem 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Footer */
+footer{
+    background-color: #222;
+}
+.footer{
+    padding: 40px 0;
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: whitesmoke;
+}
+.footer .social a{
+    font-size: 30px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.footer .social a:hover{
+    opacity: 0.5;
+}
+.footer ul{
+    margin-top: 0px;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul a{
+    color: whitesmoke;
+    text-decoration: none;
+    opacity: 0.8;
+}
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer ul li a:hover{
+    opacity: 0.5;
+
+}
+.copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: wheat;
+}
+form #pay {
+    text-decoration: none;
+    color: white;
+    border: 0px;
+    background: none;
+    display: inline-block;
+    text-align: center;
+    padding: 14px 40px;
+    border: 2px solid #2ecc11;
+    outline: none;
+    border-radius: 34px;
+    transition: 0.25s;
+    font-size: 15px;
+}

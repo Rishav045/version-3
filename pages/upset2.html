@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Therapy.css">
+    <title>Why</title>
+</head>
+<body>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=rrgwSBkT"></script>
+    <form>
+    <strong><h1> I can't stop crying when I am upset</h1></strong>
+    <br>
+    <strong>----Mini Therapy----</strong>
+    <br><br>
+    </form>
+    <form>
+    <p id="text">
+        Crying can make us feel more vulnerable than we’d want to, especially in moments where we are trying to stand up for ourselves, We may also worry that we won’t be taken seriously.
+
+So dear, let’s begin with trying to get more clarity on our emotions and understand our reaction to sadness a little better. Shall we? 🤝</p>
+        <br><br><br><br>
+        <input type="button" onclick="textspeak()" value="Listen">
+        <a href="Feeling.html">How are you feeling now dear?</a>
+</form>
+<script>
+    
+    function textspeak(){
+        // var text = document.getElementById("text").value;
+        var text =document.getElementById("text"). innerText;
+        // alert(text);
+        responsiveVoice.speak(text);
+    }
+</script>
+</body>
+</html>
