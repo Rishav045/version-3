@@ -40,7 +40,7 @@ function generateItems(items){
         todoItem.appendChild(todoText);
         todoItems.push(todoItem)
     })
-    document.querySelector(".todo-items").replaceChildren(...todoItems);
+    document.querySelector(".todo-items",user,"to_do").replaceChildren(...todoItems);
 }
 
 
