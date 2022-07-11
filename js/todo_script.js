@@ -1,7 +1,7 @@
 
 function getItems(){
-    // const user = auth.currentUser;
-    db.collection("todo-items").onSnapshot((snapshot) => {
+    const user = auth.currentUser;
+    db.collection("todo-items",user,"to_do").onSnapshot((snapshot) => {
         let items = [];
         snapshot.docs.forEach((doc) => {
             items.push({
@@ -49,7 +49,7 @@ function addItem(event){
     // const user = auth.currentUser;
     event.preventDefault();
     let text = document.getElementById("todo-input");
-    let newItem = db.collection("todo-items").add({
+    let newItem = db.collection("todo-items",user,"to_do").add({
         text: text.value,
         status: "active"
     })
@@ -58,7 +58,7 @@ function addItem(event){
 
 function markCompleted(id){
     // const user = auth.currentUser;
-    let item = db.collection("todo-items").doc(id);
+    let item = db.collection("todo-items",user,"to_do").doc(id);
     item.get().then(function(doc) {
         if (doc.exists) {
             if(doc.data().status == "active"){
