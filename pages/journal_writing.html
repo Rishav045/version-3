@@ -139,7 +139,7 @@
     userId1:user.uid
     
    });
-   alert('saved');
+  //  alert('saved');
    alert(user.uid)
   });
 
@@ -148,7 +148,7 @@
 
     $('#dataTbl td').remove();
     var rowNum = 0; 
-    const dbRef = ref(database, 'trial/',where ("userId1" , "===" ,user.uid)  );
+    const dbRef = ref(database, 'trial/' );
 
     onValue(dbRef, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
