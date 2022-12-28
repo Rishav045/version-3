@@ -125,7 +125,7 @@
  const database = getDatabase(app);
  const auth = getAuth();
   const user = auth.currentUser;
-
+console.log(user.uid)
  submit.addEventListener('click',(e) => {
     var title = document.getElementById('entrytitle').value;  
     var entry = document.getElementById('entry').value;  
