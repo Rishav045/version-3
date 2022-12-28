@@ -123,7 +123,7 @@
   };
  const app = initializeApp(firebaseConfig);
  const database = getDatabase(app);
- const auth = getAuth();
+ const auth = getAuth(app);
   const user = auth.currentUser;
 console.log(user.uid)
  submit.addEventListener('click',(e) => {
