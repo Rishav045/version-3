@@ -136,7 +136,7 @@
     set(ref(database, 'trial/' + userId), {
     title: title,
     entry: entry,
-    userId1:userId
+    userId1:user.uid
     
    });
    alert('saved');
@@ -148,7 +148,7 @@
 
     $('#dataTbl td').remove();
     var rowNum = 0; 
-    const dbRef = ref(database, 'trial/userId', where("userId1" , "==" ,userID) );
+    const dbRef = ref(database, 'trial/',where ("userId1" , "===" ,user.uid)  );
 
     onValue(dbRef, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
