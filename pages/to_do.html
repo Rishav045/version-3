@@ -10,7 +10,7 @@
     <title>To Do List App</title>
     <link rel="stylesheet" href="../css/todo_style.css">
     <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> -->
     <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script> -->
     <!-- <script src="../js/todo_firebase.js"></script> -->
     <!-- <script src="../js/todo_script.js"></script> -->
@@ -87,6 +87,7 @@
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
     import { getDatabase , set , ref , push , child , onValue  } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
     import{getAuth} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
+    import {firestore} from "https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"
     const firebaseConfig = {
     apiKey: "AIzaSyB2FxCzHJ3LNK-uSJEQ-pNxwmyRoZu9dVE",
     authDomain: "system-688a2.firebaseapp.com",
@@ -100,7 +101,7 @@
  const database = getDatabase(app);
  const auth = getAuth(app);
   const userId1=localStorage.getItem("user1");
-  var db = firebase.firestore(app);
+  var db = firestore(app);
   console.log(userId1);
 
   function getItems(){
