@@ -134,7 +134,7 @@
 
     const userId = push(child(ref(database), 'trial')).key;
    
-    set(ref(database, 'trial/' + userId), {
+    set(ref(database, 'trial/' +userId1+'/' +userId), {
     title: title,
     entry: entry
    });
@@ -148,7 +148,7 @@
 
     $('#dataTbl td').remove();
     var rowNum = 0; 
-    const dbRef = ref(database, 'trial/' );
+    const dbRef = ref(database, 'trial/'+userId1+'/' );
 
     onValue(dbRef, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
