@@ -161,6 +161,8 @@
         .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
+    const uid = user.uid;
+            localStorage.setItem("user",uid);
             const dt = new Date();
     update(ref(database,'users/'+user.uid),{
            lase_login: dt, 
