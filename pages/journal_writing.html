@@ -124,7 +124,7 @@
  const app = initializeApp(firebaseConfig);
  const database = getDatabase(app);
  const auth = getAuth(app);
-  const userId1=JSON.parse(localStorage.getItem('user'));
+  const userId1=JSON.parse(localStorage.getItem("user"));
   console.log(userId1);
 
  submit.addEventListener('click',(e) => {
