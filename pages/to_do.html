@@ -9,11 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
     <title>To Do List App</title>
     <link rel="stylesheet" href="../css/todo_style.css">
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script> -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script> -->
-    <!-- <script src="../js/todo_firebase.js"></script> -->
-    <!-- <script src="../js/todo_script.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <script src="../js/todo_firebase.js"></script>
+    <script src="../js/todo_script.js"></script>
 </head>
 <body>
     <div class="background-image">
@@ -55,7 +55,7 @@
                 <div class="todo-item">
                     <div class="check">
                         <div class="check-mark">
-                            
+
                         </div>
                     </div>
                     <div class="todo-text">
@@ -72,117 +72,12 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
-    
-    
-    
+
+
+
 </body>
 
 </html>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
-    import { getDatabase , set , ref , push , child , onValue  } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-database.js";
-    import{getAuth} from "https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js";
-    import {firestore} from "https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"
-    const firebaseConfig = {
-    apiKey: "AIzaSyB2FxCzHJ3LNK-uSJEQ-pNxwmyRoZu9dVE",
-    authDomain: "system-688a2.firebaseapp.com",
-    databaseURL: "https://system-688a2-default-rtdb.firebaseio.com",
-    projectId: "system-688a2",
-    storageBucket: "system-688a2.appspot.com",
-    messagingSenderId: "693102082383",
-    appId: "1:693102082383:web:7dc992794907cfd1f4ad3a"
-  };
- const app = initializeApp(firebaseConfig);
- const database = getDatabase(app);
- const auth = getAuth(app);
-  const userId1=localStorage.getItem("user1");
-  var db = firestore(app);
-  console.log(userId1);
-
-  function getItems(){
-    // const user = auth.currentUser;
-    const user1 = localStorage.getItem('user1');
-    db.collection("todo-items",user1,"to_do").onSnapshot((snapshot) => {
-        let items = [];
-        snapshot.docs.forEach((doc) => {
-            items.push({
-                id: doc.id, 
-                ...doc.data()
-            })
-        })
-        generateItems(items);
-    })
-}
-
-function generateItems(items){
-    let todoItems = []
-    items.forEach((item) => {
-        let todoItem = document.createElement("div");
-        todoItem.classList.add("todo-item");
-        let checkContainer = document.createElement("div");
-        checkContainer.classList.add("check");
-        let checkMark = document.createElement("div");
-        checkMark.classList.add("check-mark");
-        checkMark.innerHTML = '<img src="assets/icon-check.svg">';
-        checkMark.addEventListener("click", function(){
-            markCompleted(item.id);
-        })
-        checkContainer.appendChild(checkMark);
-
-        let todoText = document.createElement("div");
-        todoText.classList.add("todo-text");
-        todoText.innerText = item.text;
-
-        if(item.status == "completed"){
-            checkMark.classList.add("checked");
-            todoText.classList.add("checked");
-        }
-        todoItem.appendChild(checkContainer);
-        todoItem.appendChild(todoText);
-        todoItems.push(todoItem)
-    })
-    document.querySelector(".todo-items",user,"to_do").replaceChildren(...todoItems);
-}
-
-
-
-function addItem(event){
-    const user1 = localStorage.getItem('user1');
-    event.preventDefault();
-    let text = document.getElementById("todo-input");
-    let newItem = db.collection("todo-items",user1,"to_do").add({
-        text: text.value,
-        status: "active"
-    })
-    text.value = "";
-
-    
-}
-
-function markCompleted(id){
-    // const user = auth.currentUser;
-    const user1 = localStorage.getItem('user1');
-    let item = db.collection("todo-items",user1,"to_do").doc(id);
-    item.get().then(function(doc) {
-        if (doc.exists) {
-            if(doc.data().status == "active"){
-                item.update({
-                    status: "completed"
-                })
-            } else {
-                item.update({
-                    status: "active"
-                })
-            }
-        }
-    })
-}
-
-getItems();
- 
-</script>
