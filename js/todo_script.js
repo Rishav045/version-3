@@ -1,26 +1,6 @@
-
-var firebaseConfig = {
-    apiKey: "AIzaSyB2FxCzHJ3LNK-uSJEQ-pNxwmyRoZu9dVE",
-      authDomain: "system-688a2.firebaseapp.com",
-    
-      projectId: "system-688a2",
-      storageBucket: "system-688a2.appspot.com",
-      messagingSenderId: "693102082383",
-      appId: "1:693102082383:web:7dc992794907cfd1f4ad3a"
-};
-
-// firebase.initializeApp(firebaseConfig);
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.getAuth(app);
-
-
-var db = firebase.firestore(app);
-
-
 function getItems(){
     // const user = auth.currentUser;
-    const user1 = localStorage.getItem('user1');
-    db.collection("todo-items",user1,"to_do").onSnapshot((snapshot) => {
+    db.collection("todo-items").onSnapshot((snapshot) => {
         let items = [];
         snapshot.docs.forEach((doc) => {
             items.push({
@@ -59,16 +39,16 @@ function generateItems(items){
         todoItem.appendChild(todoText);
         todoItems.push(todoItem)
     })
-    document.querySelector(".todo-items",user,"to_do").replaceChildren(...todoItems);
+    document.querySelector(".todo-items").replaceChildren(...todoItems);
 }
 
 
 
 function addItem(event){
-    const user1 = localStorage.getItem('user1');
+    // const user = auth.currentUser;
     event.preventDefault();
     let text = document.getElementById("todo-input");
-    let newItem = db.collection("todo-items",user1,"to_do").add({
+    let newItem = db.collection("todo-items").add({
         text: text.value,
         status: "active"
     })
@@ -77,8 +57,7 @@ function addItem(event){
 
 function markCompleted(id){
     // const user = auth.currentUser;
-    const user1 = localStorage.getItem('user1');
-    let item = db.collection("todo-items",user1,"to_do").doc(id);
+    let item = db.collection("todo-items").doc(id);
     item.get().then(function(doc) {
         if (doc.exists) {
             if(doc.data().status == "active"){
