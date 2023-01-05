@@ -70,7 +70,7 @@ function deleteTodo(id){
     let item = db.collection(userId1).doc(id);
     item.get().then(function(doc){
         if(doc.exists){
-            item.delete();
+            item.delete() ;
             alert('deleted');
         }
     })
