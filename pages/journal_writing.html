@@ -126,6 +126,7 @@
  const auth = getAuth(app);
   const userId1=localStorage.getItem("user1");
   console.log(userId1);
+  fetchData();
 
  submit.addEventListener('click',(e) => {
     var title = document.getElementById('entrytitle').value;  
@@ -145,6 +146,27 @@
    
      
   });
+
+  const fetchData=()=>{
+    $('#dataTbl td').remove();
+    var rowNum = 0; 
+    const dbRef = ref(database, 'trial/'+userId1+'/' );
+
+    onValue(dbRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+      const childKey = childSnapshot.key;
+      const childData = childSnapshot.val();
+      // ...
+      rowNum += 1; 
+      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry +  "</td></tr>"
+
+      $(row).appendTo('#dataTbl');
+      
+      });
+    }, {
+       onlyOnce: true
+    });
+  }
 
   // read data
   getData.addEventListener('click',(e) => {
