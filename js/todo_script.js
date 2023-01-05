@@ -41,7 +41,6 @@ function generateItems(items){
             checkMark.classList.add("checked");
             todoText.classList.add("checked");
         }
-        
         todoItem.appendChild(checkContainer);
         todoItem.appendChild(todoText);
         todoItem.appendChild(deleteItem);
