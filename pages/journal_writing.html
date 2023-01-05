@@ -157,7 +157,7 @@
       const childData = childSnapshot.val();
       // ...
       rowNum += 1; 
-      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry +  "</td><td><button onclick='del(childKey)'> delete </button>"+"</td></tr>"
+      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry +  "</td><td><button onclick='childSnapshot.delete()'> delete </button>"+"</td></tr>"
       $(row).appendTo('#dataTbl');
       
       });
