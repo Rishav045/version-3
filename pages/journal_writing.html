@@ -142,7 +142,7 @@
   // console.log(user);
   //  alert(user.uid)
      
-     $('#dataTbl td').remove();
+    $('#dataTbl td').remove();
     var rowNum = 0; 
     const dbRef = ref(database, 'trial/'+userId1+'/' );
 
@@ -157,6 +157,9 @@
       $(row).appendTo('#dataTbl');
       
       });
+    }, {
+       onlyOnce: true
+    });
      
   });
 
