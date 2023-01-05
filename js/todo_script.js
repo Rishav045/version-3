@@ -27,6 +27,9 @@ function generateItems(items){
         let deleteItem = document.createElement("BUTTON");
         deleteItem.innerText="delete"
         deleteItem.classList.add("deletebtn");
+        deleteItem.addEventListener("click",function(){
+            deleteTodo(item.id);
+        })
         checkMark.innerHTML = '<img src="../component/assets/icon-check.svg">';
         checkMark.addEventListener("click", function(){
             markCompleted(item.id);
@@ -61,6 +64,16 @@ function addItem(event){
         status: "active"
     })
     text.value = "";
+}
+
+function deleteTodo(id){
+    let item = db.collection(userId1).doc(id);
+    item.get().then(function(doc){
+        if(doc.exists){
+            doc.delete();
+            alert('deleted');
+        }
+    })
 }
 
 function markCompleted(id){
