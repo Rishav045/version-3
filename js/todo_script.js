@@ -24,7 +24,8 @@ function generateItems(items){
         let checkMark = document.createElement("div");
         checkMark.classList.add("check-mark");
         //Adding delete button in todo
-        let deleteItem = document.createElement("button");
+        let deleteItem = document.createElement("BUTTON");
+        deleteItem.innerText="button"
         deleteItem.classList.add("deletebtn");
         checkMark.innerHTML = '<img src="../component/assets/icon-check.svg">';
         checkMark.addEventListener("click", function(){
@@ -40,6 +41,7 @@ function generateItems(items){
             checkMark.classList.add("checked");
             todoText.classList.add("checked");
         }
+        todoItem.appendChild(deleteItem);
         todoItem.appendChild(checkContainer);
         todoItem.appendChild(todoText);
         todoItems.push(todoItem)
