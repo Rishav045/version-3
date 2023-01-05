@@ -127,7 +127,7 @@
   const userId1=localStorage.getItem("user1");
   console.log(userId1);
 
-  function del(key){
+  const del=(key)=>{
     const dbRef = ref(database, 'trial/'+userId1+'/' );
 
     onValue(dbRef, (snapshot) => {
