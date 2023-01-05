@@ -129,24 +129,9 @@
 
   
 
-  const del=(key)=>{
-    const dbRef = ref(database, 'trial/'+userId1+'/' );
+  
 
-    onValue(dbRef, (snapshot) => {
-      snapshot.forEach((childSnapshot) => {
-      const childKey = childSnapshot.key;
-      const childData = childSnapshot.val();
-      // ...
-      if(childKey===key)
-      {
-        console.log(childSnapshot.val());
-        childSnapshot.delete();
-      }
-      
-      });
-    });
-
-  }
+  
 
   const fetchData=()=>{
     $('#dataTbl td').remove();
@@ -159,7 +144,7 @@
       const childData = childSnapshot.val();
       // ...
       rowNum += 1; 
-      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry +  "</td><td><button id='delJ'> delete </button>"+"</td></tr>"
+      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry + "</td></tr>"
       $(row).appendTo('#dataTbl');
       
       });
@@ -205,7 +190,7 @@
       const childData = childSnapshot.val();
       // ...
       rowNum += 1; 
-      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry +  "</td><td><button id='delJ'> delete </button>"+"</td></tr>"
+      var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry + "</td></tr>"
 
 
       $(row).appendTo('#dataTbl');
@@ -218,9 +203,7 @@
 
 
   });
-  document.getElementById("delJ").addEventListener("click", function() {
-    del(childKey);
-}, false);
+  
 
   
  
