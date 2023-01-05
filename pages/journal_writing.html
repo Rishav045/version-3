@@ -72,7 +72,7 @@
       <th scope="col">S.no</th>
       <th scope="col">Title</th>
       <th scope="col" >Entry</th>
-      
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -184,7 +184,7 @@
       rowNum += 1; 
       var row = "<tr><td >" + rowNum + "</td><td>" + childData.title + "</td><td>" + childData.entry +  "</td><td><button> delete </button>"+"</td></tr>"
 
-      
+
       $(row).appendTo('#dataTbl');
       
       });
