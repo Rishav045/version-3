@@ -23,7 +23,10 @@ function generateItems(items){
         checkContainer.classList.add("check");
         let checkMark = document.createElement("div");
         checkMark.classList.add("check-mark");
-        checkMark.innerHTML = '<img src="assets/icon-check.svg">';
+        //Adding delete button in todo
+        let deleteItem = document.createElement("button");
+        deleteItem.classList.add("delete");
+        checkMark.innerHTML = '<img src="../components/assets/icon-check.svg">';
         checkMark.addEventListener("click", function(){
             markCompleted(item.id);
         })
