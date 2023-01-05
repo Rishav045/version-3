@@ -127,9 +127,7 @@
   const userId1=localStorage.getItem("user1");
   console.log(userId1);
 
-  document.getElementById("delJ").addEventListener("click", function() {
-    del(childKey);
-}, false);
+  
 
   const del=(key)=>{
     const dbRef = ref(database, 'trial/'+userId1+'/' );
@@ -220,6 +218,9 @@
 
 
   });
+  document.getElementById("delJ").addEventListener("click", function() {
+    del(childKey);
+}, false);
 
   
  
